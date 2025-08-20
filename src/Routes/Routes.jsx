@@ -2,6 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import { Home } from "lucide-react";
 import Error from "../Components/Error";
+import About from "../pages/About";
+import Services from "../pages/Services";
+import Portfolio from "../pages/Portfolio";
+import Contact from "../pages/Contact";
+import Blog from "../pages/Blog";
 
 const router = createBrowserRouter([
 
@@ -17,22 +22,20 @@ const router = createBrowserRouter([
     },
 
         {  path: "/about" ,
-            element: 
+            element: <About></About>
         },
-    {   path: "/about",
-        element: 
-     },
+  
     {  path: "/services",
-        element: 
+        element: <Services></Services>
      },
     {   path: "/portfolio",
-        element: 
+        element: <Portfolio></Portfolio>
      },
     { path: "/contact" ,
-        element: 
+        element: <Contact></Contact>
     },
     {   path: "/blog",
-        element: 
+        element: <Blog></Blog>
      },
     ] 
     }

@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={` w-full transition-all  ${
+      className={` fixed w-full transition-all  ${
         isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
