@@ -1,18 +1,19 @@
 import ContactCTA from "../Components/ContactCTA"
 import HeroSection from "../Components/HeroSection"
+
 import ServicesOverview from "../Components/ServicesOverview"
 import ServicesSlider from "../Components/ServicesSlider"
 import TestimonialsCarousel from "../Components/TestimonialsCarousel"
 
 const Home = () => {
   return (
-    <div className="">
-      <HeroSection />
-      <ServicesSlider />
-      <ServicesOverview />
-      <TestimonialsCarousel />
-      <ContactCTA />
-    </div>
+   <div>
+  <HeroSection />
+  <ServicesSlider />
+  <ServicesOverview />
+  <TestimonialsCarousel />
+  <ContactCTA />
+</div>
   )
 }
 

@@ -1,5 +1,6 @@
 import { Calendar, User, ArrowRight, Tag } from "lucide-react"
 import { Link } from "react-router-dom"
+import HeroSection from "../Components/HeroSection"
 
 const Blog = () => {
   const featuredPost = {
@@ -195,6 +196,7 @@ const Blog = () => {
             ))}
           </div>
         </div>
+        {/* <HeroSection></HeroSection> */}
       </section>
 
       {/* Newsletter Signup */}

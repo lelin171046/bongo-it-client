@@ -29,19 +29,20 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path
 
   return (
-    <nav
-      className={` fixed w-full transition-all  ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
-      }`}
-    >
+  <nav
+  className={`sticky top-0 w-full transition-all z-50 ${
+    isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+  }`}
+>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">A</span>
+              <span className="text-white font-bold text-lg">B</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">Agency</span>
+            <span className="text-xl font-bold text-gray-900">BongoIT</span>
           </Link>
 
           {/* Desktop Navigation */}

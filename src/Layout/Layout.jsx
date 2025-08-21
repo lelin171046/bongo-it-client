@@ -9,16 +9,21 @@ const Layout = () => {
 
     return (
         <div>
-            {/* Navbar */}
-            {noHeaderFooter || <Navbar />}
+           <div>
+  {/* Navbar */}
+  {noHeaderFooter || <Navbar />}
 
-            {/* Outlet */}
-            <div className={`min-h-[calc(100vh-306px)] ${!noHeaderFooter ? 'mt-16' : ''}`}>
-                <Outlet />
-            </div>
+  {/* Outlet */}
+  <div
+    className={`min-h-[calc(100vh-306px)] `}
+  >
+    <Outlet />
+  </div>
 
-            {/* Footer */}
-            {noHeaderFooter || <Footer />}
+  {/* Footer */}
+  {noHeaderFooter || <Footer />}
+</div>
+
         </div>
     );
 };

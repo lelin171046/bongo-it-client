@@ -1,12 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
-import { Home } from "lucide-react";
+
 import Error from "../Components/Error";
 import About from "../pages/About";
+import Home from "../pages/Home";
 import Services from "../pages/Services";
 import Portfolio from "../pages/Portfolio";
 import Contact from "../pages/Contact";
 import Blog from "../pages/Blog";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
 
@@ -37,6 +40,14 @@ const router = createBrowserRouter([
     {   path: "/blog",
         element: <Blog></Blog>
      },
+     {
+        path: 'login',
+        element: <Login></Login>
+     },
+     {
+        path: 'register',
+        element: <Register></Register>
+     }
     ] 
     }
 ])
