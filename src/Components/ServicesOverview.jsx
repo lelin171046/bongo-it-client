@@ -1,5 +1,6 @@
-import { Video, ImageIcon, Search, Users, ArrowRight } from "lucide-react"
-import { Link } from "react-router-dom"
+import { useState, useEffect } from "react";
+import { Video, ImageIcon, Search, Users, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ServicesOverview = () => {
   const services = [
@@ -31,7 +32,24 @@ const ServicesOverview = () => {
       price: "From $25",
       features: ["Profile Setup", "Proposal Writing", "Client Management"],
     },
-  ]
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % services.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + services.length) % services.length);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 5000); // auto-slide every 5s
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="py-20 bg-white">
@@ -45,39 +63,58 @@ const ServicesOverview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-emerald-200 transition-all duration-300"
-            >
-              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-600 transition-colors">
-                <service.icon className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors" />
+        {/* Slider Container */}
+        <div className="relative overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            {services.map((service, index) => (
+              <div key={index} className="min-w-full md:min-w-1/2 lg:min-w-1/4 p-4">
+                <div className="group bg-white rounded-xl border border-sky-600 p-6 hover:shadow-lg hover:border-yellow-300 transition-all duration-300">
+                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-600 transition-colors">
+                    <service.icon className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors" />
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+
+                  <div className="text-2xl font-bold text-emerald-600 mb-4">{service.price}</div>
+
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="text-sm text-gray-600 flex items-center">
+                        <div className="w-1.5 h-1.5 bg-emerald-600 rounded-full mr-2"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
+                  >
+                    Get Started
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
               </div>
+            ))}
+          </div>
 
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-
-              <div className="text-2xl font-bold text-emerald-600 mb-4">{service.price}</div>
-
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="text-sm text-gray-600 flex items-center">
-                    <div className="w-1.5 h-1.5 bg-emerald-600 rounded-full mr-2"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                to="/contact"
-                className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
-              >
-                Get Started
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
-            </div>
-          ))}
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg"
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-800" />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg"
+          >
+            <ChevronRight className="w-6 h-6 text-gray-800" />
+          </button>
         </div>
 
         <div className="text-center mt-12">
@@ -90,7 +127,7 @@ const ServicesOverview = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ServicesOverview
+export default ServicesOverview;

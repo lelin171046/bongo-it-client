@@ -2,37 +2,41 @@
 
 import { useState, useEffect } from "react"
 import { Video, ImageIcon, Search, Users, ChevronLeft, ChevronRight } from "lucide-react"
-import img from "./../assets/Video Editing .png"
+import img1 from "./../assets/Video Editing .png"
+import img2 from "./../assets/SEO.png"
+import img3 from "./../assets/YouTube Thumbnail.png"
+
 
 const ServicesSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const services = [
-    {
-      icon: Video,
-      title: "Video Editing",
-      description: "Professional video editing with seamless transitions, color correction, and audio enhancement",
-      image: {img},
-    },
-    {
-      icon: ImageIcon,
-      title: "Thumbnail Design",
-      description: "Eye-catching thumbnails that boost click-through rates and video performance",
-      image: "/placeholder.svg?height=300&width=400",
-    },
-    {
-      icon: Search,
-      title: "YouTube SEO",
-      description: "Optimize your content for maximum visibility and organic growth",
-      image: "https://ibb.co.com/sJML5g1B",
-    },
-    {
-      icon: Users,
-      title: "Freelancing Support",
-      description: "Complete support for your Fiverr and Upwork freelancing journey",
-      image: "/placeholder.svg?height=300&width=400",
-    },
-  ]
+const services = [
+  {
+    icon: Video,
+    title: "Video Editing",
+    description: "Professional video editing with seamless transitions, color correction, and audio enhancement",
+    image: img1, // ✅ just use the imported local image
+  },
+  {
+    icon: ImageIcon,
+    title: "Thumbnail Design",
+    description: "Eye-catching thumbnails that boost click-through rates and video performance",
+    image: img3
+  },
+  {
+    icon: Search,
+    title: "YouTube SEO",
+    description: "Optimize your content for maximum visibility and organic growth",
+    image: img2
+  },
+  {
+    icon: Users,
+    title: "Freelancing Support",
+    description: "Complete support for your Fiverr and Upwork freelancing journey",
+    image: "https://i.ibb.co/N6Mxb7Gw/freelancing.png", // ✅ direct link
+  },
+]
+
 
   useEffect(() => {
     const timer = setInterval(() => {

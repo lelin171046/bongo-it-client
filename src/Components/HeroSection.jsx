@@ -28,7 +28,7 @@ const HeroSection = () => {
         >
           <div className="space-y-6 max-w-4xl">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-primary/90 backdrop-blur-sm rounded-full text-xs sm:text-sm md:text-base font-semibold border border-white/20 shadow-lg animate-pulse text-white">
+            <div className="inline-flex items-center px-4 py-2 bg-primary/90 backdrop-blur-sm rounded-full text-xs sm:text-sm md:text-blue-500 font-semibold border border-white/20 shadow-lg animate-pulse text-white">
               <Sparkles className="w-4 h-4 mr-2" />
               #1 Creative Agency for Content Creators
             </div>
@@ -44,7 +44,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed backdrop-blur-sm bg-black/30 p-3 sm:p-6 rounded-xl border border-white/10">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-green-400 leading-relaxed backdrop-blur-sm bg-black/30 p-3 sm:p-6 rounded-xl border border-white/10">
               Professional video editing, stunning thumbnails, and YouTube SEO optimization that helps content creators
               grow their audience and increase revenue.
             </p>
@@ -71,7 +71,8 @@ const HeroSection = () => {
          
         </div>
       </YouTubeBackground>
-       {/* Stats */}
+      <div className="">
+         {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-12 w-full max-w-5xl">
             {stats.map((stat, index) => (
               <div
@@ -93,6 +94,7 @@ const HeroSection = () => {
               </div>
             ))}
           </div>
+      </div>
     </section>
   )
 }
