@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Video, ImageIcon, Search, Users, ChevronLeft, ChevronRight } from "lucide-react"
+import img from "./../assets/Video Editing .png"
 
 const ServicesSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -11,7 +12,7 @@ const ServicesSlider = () => {
       icon: Video,
       title: "Video Editing",
       description: "Professional video editing with seamless transitions, color correction, and audio enhancement",
-      image: "/placeholder.svg?height=300&width=400",
+      image: {img},
     },
     {
       icon: ImageIcon,
@@ -23,7 +24,7 @@ const ServicesSlider = () => {
       icon: Search,
       title: "YouTube SEO",
       description: "Optimize your content for maximum visibility and organic growth",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://ibb.co.com/sJML5g1B",
     },
     {
       icon: Users,
