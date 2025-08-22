@@ -9,16 +9,16 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-amber-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
+                <span className="text-white font-bold text-lg">B</span>
               </div>
-              <span className="text-xl font-bold">Agency</span>
+              <span className="text-xl font-bold">Bongo<span className=" text-emerald-500">IT</span> </span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Professional video editing, thumbnail design, and YouTube SEO services to help content creators and
               businesses grow their online presence.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a href="https://www.facebook.com/raihankbtop" className="text-gray-400 hover:text-emerald-400 transition-colors">
                 <span className="sr-only">Facebook</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
@@ -76,8 +76,9 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-gray-300">
               <li>Email: hello@agency.com</li>
-              <li>Phone: +1 (555) 123-4567</li>
-              <li>Address: 123 Business St, City, State 12345</li>
+              <li>Phone: +880 1876-213996</li>
+              <li>Address:  Akhsha Complex (2th floor) Burirhat,
+Rangpur City</li>
             </ul>
           </div>
         </div>

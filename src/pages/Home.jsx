@@ -11,7 +11,7 @@ const Home = () => {
    <div>
   <HeroSection />
   <ServicesSlider />
-  <Slider></Slider>
+
   <ServicesOverview />
   <TestimonialsCarousel />
   <ContactCTA />

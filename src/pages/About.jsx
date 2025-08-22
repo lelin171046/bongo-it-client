@@ -10,21 +10,21 @@ const About = () => {
 
   const team = [
     {
-      name: "Alex Johnson",
+      name: "MD Raihan  (Kb)",
       role: "Creative Director",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "https://scontent.fdac147-1.fna.fbcdn.net/v/t39.30808-6/488991945_2015287382332811_6124703051187284899_n.jpg?stp=c0.168.1540.1540a_dst-jpg_s206x206_tt6&_nc_cat=104&ccb=1-7&_nc_sid=52bb43&_nc_eui2=AeFEMbcB2zIg4vlXG0dFz9q4K_CxBFt8pv4r8LEEW3ym_vTkGbVd0bKyThJYSgllh_9NQuHzk82HIHIl1UtJo6sQ&_nc_ohc=fLMVht_3hTYQ7kNvwFkydfe&_nc_oc=AdkuUdKcTuwuvIvnIhkU-oT1N8-HbA1WgK0zD6x9SGjdtsuuzf8vteGzFNdPn_9EquI&_nc_zt=23&_nc_ht=scontent.fdac147-1.fna&_nc_gid=qnLE5_1aXVgFcAUzOEMeaQ&oh=00_AfVBkrkdHaR_GxfTfa1kxWmHwWx3Xy0_GolqxgC5KgtEmQ&oe=68AECBEC",
       bio: "10+ years in video editing and creative direction",
     },
     {
-      name: "Sarah Chen",
-      role: "Lead Designer",
-      image: "/placeholder.svg?height=300&width=300",
+      name: "MD Raihan MIah",
+      role: "General Manager",
+      image: "https://scontent.fdac147-1.fna.fbcdn.net/v/t1.6435-9/122269301_928780167650210_6572663537588986019_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=110&ccb=1-7&_nc_sid=fe5ecc&_nc_eui2=AeEV9LOFrBvIf4iQO14fB-hG0jt9YOjM2n7SO31g6Mzafk5cTQtXwqI8lgGQYul1gUih_alYzDFWtmqCXSXXpkmU&_nc_ohc=ZXDIl0uE0zYQ7kNvwGM6bGk&_nc_oc=AdnfisYP8HbKhx3lg_WpmPkK4kl2USXgjUz2TWiA7b7VV4wNgN_3yNUMZ3ZInC2YYU8&_nc_zt=23&_nc_ht=scontent.fdac147-1.fna&_nc_gid=knkzZ5-V4HNYpHKoMEaPEA&oh=00_AfWYOjdHn96U9HxpRjbjVd7yjhhQiNEpQxIB7Ao_qPtB1g&oe=68D057C0",
       bio: "Expert in thumbnail design and visual branding",
     },
     {
-      name: "Mike Rodriguez",
-      role: "SEO Specialist",
-      image: "/placeholder.svg?height=300&width=300",
+      name: "Md Sohag Hasan ",
+      role: "CEO ",
+      image: "https://scontent.fdac147-1.fna.fbcdn.net/v/t39.30808-1/471246658_2403938936604126_3866987642265250416_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeE1VI2lrCSZ-KzJf0UBgTrj9kFoXauvSPf2QWhdq69I9wEH8HP2_akUXEfOJS9TLPVK8xNIEi990a5P1E3GohOL&_nc_ohc=PESavF9RtycQ7kNvwEwBP_a&_nc_oc=Adnw556H-lvIoiFnV-nztgp67y66Jt5CL66UzcZEDX4lcYEWsmE2SqkNV-O1bN5fUAU&_nc_zt=24&_nc_ht=scontent.fdac147-1.fna&_nc_gid=Fjqy8gEcHypuWbccttTIqQ&oh=00_AfX5ZVFSydLwmzDAqKfLj5Yn7b4PEVT_8PQmLwCDolHlww&oe=68AEA0DD",
       bio: "YouTube SEO expert with proven track record",
     },
   ]
@@ -63,7 +63,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="/placeholder.svg?height=400&width=600"
+                src="https://scontent.fdac147-1.fna.fbcdn.net/v/t39.30808-6/475845758_1961535351041348_7875120399383956409_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFmGy-qJ1cFm8_y4lez68R8SGnCZvSgMkpIacJm9KAySitb1m8qA0Xkv42ms38lKlcu344B7LqN5KI1YfOGzQGG&_nc_ohc=zrsP6vGEwFwQ7kNvwGKXVx7&_nc_oc=AdmR1ZcE4Q9NuTN_mH6TkODIaAdnQEUp2KeGOofZCyzo7rahXXZCH8zWZFv7Tg_8G3I&_nc_zt=23&_nc_ht=scontent.fdac147-1.fna&_nc_gid=U6HN-913o1uGKGtCJACiXQ&oh=00_AfXuerCy7syg9MTFA8e9hvbdETNm6BSXGznE3unqFifycA&oe=68AECE7A"
                 alt="Our team at work"
                 className="rounded-lg shadow-lg"
               />
