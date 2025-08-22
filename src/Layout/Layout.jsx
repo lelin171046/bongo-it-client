@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import YouTubeBackground from "../Components/YoutubeBackground";
 
 const Layout = () => {
     const location = useLocation();
