@@ -138,7 +138,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-8 items-center justify-center">
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
                 <div className="space-y-6">
@@ -146,7 +146,7 @@ const Contact = () => {
                     <Mail className="w-6 h-6 text-emerald-600 mt-1 mr-4" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Email</h3>
-                      <p className="text-gray-600">hello@agency.com</p>
+                      <p className="text-gray-600">promarketerraihan@gmail.com</p>
                       <p className="text-sm text-gray-500">We'll respond within 2 hours</p>
                     </div>
                   </div>

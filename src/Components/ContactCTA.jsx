@@ -59,8 +59,8 @@ const ContactCTA = () => {
         <div className="text-center mt-8">
           <p className="text-emerald-100">
             Or email us directly at{" "}
-            <a href="mailto:hello@agency.com" className="text-white font-semibold hover:underline">
-              hello@agency.com
+            <a href="mailto:promarketerraihan@gmail.com" className="text-white font-semibold hover:underline">
+              promarketerraihan@gmail.com
             </a>
           </p>
         </div>

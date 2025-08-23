@@ -33,7 +33,7 @@ const services = [
     icon: Users,
     title: "Freelancing Support",
     description: "Complete support for your Fiverr and Upwork freelancing journey",
-    image: "https://scontent.fdac147-1.fna.fbcdn.net/v/t39.30808-6/480772285_1978816505979899_616982090202950506_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeGNi9s72cbKZaf-xpw0sP_AZMt3_9Wpn_Fky3f_1amf8SJ_q0WhJMYOkD3Y-yWyCTYxsRHQJefw-e6mo-Zr6GjX&_nc_ohc=UuGTAOyhtRYQ7kNvwFiXg1F&_nc_oc=AdmHzaSzDsNg1_WVYWSWfTf8EqcX4AWI9FTvPZv4cjb_UNgyE4c0T_j4_zfFurNhhXQ&_nc_zt=23&_nc_ht=scontent.fdac147-1.fna&_nc_gid=YZGH2pv4CNgMK_-QUXe1tw&oh=00_AfWleuCypW7Mduv1n7RrPGqj4vu8G2L9bVs6Ms_0wB2iVA&oe=68AEA46B", // ✅ direct link
+    image: "https://img.freepik.com/premium-photo/business-man-freelance-worker-call-center-support-service-operator-helpline-having-talk-with-client_191803-11102.jpg", // ✅ direct link
   },
 ]
 

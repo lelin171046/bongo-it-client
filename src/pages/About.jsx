@@ -62,8 +62,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="https://media.licdn.com/dms/image/v2/D563DAQH9a8N8-M1Ndg/image-scale_127_750/image-scale_127_750/0/1700868161300/bongoit_rangpur_cover?e=1756544400&v=beta&t=a4eDCKdInIdOgHsNGTXjYFFuIHDDEHlzlU1FdQ6fml8"
-                alt="Our team at work"
+                src="https://scontent.fdac147-1.fna.fbcdn.net/v/t39.30808-6/536270021_614368175072341_4955616928835676812_n.png?stp=dst-png_s960x960&_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=glbcw6lz7FcQ7kNvwHi47OS&_nc_oc=Adn_6KpNFTxHcrGn-UsKQPw6KpDHQDJdhXKq8DwJqU5SZ47jvr9gLGHPbIVj5NBqH24&_nc_zt=23&_nc_ht=scontent.fdac147-1.fna&_nc_gid=MNUPQ59vN4SCDoYQMmZdfw&oh=00_AfXfnGODe73gcNXfy-ISOEt8UK3UDKU0B7hjycGNaJJnGQ&oe=68AFD11A"
                 className="rounded-lg shadow-lg"
               />
             </div>
