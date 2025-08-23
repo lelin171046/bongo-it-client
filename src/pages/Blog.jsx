@@ -29,7 +29,7 @@ const Blog = () => {
       id: 3,
       title: "YouTube SEO: Complete Guide for 2024",
       excerpt: "Master the latest YouTube algorithm changes and optimization strategies.",
-      image: "/placeholder.svg?height=250&width=400",
+      image: "https://rankmath.com/wp-content/uploads/2024/01/YouTube-SEO-1200x630-1.jpg",
       author: "Mike Rodriguez",
       date: "March 10, 2024",
       category: "SEO",
@@ -39,7 +39,7 @@ const Blog = () => {
       id: 4,
       title: "Building a Successful Freelancing Business",
       excerpt: "From first client to six-figure income: a complete roadmap.",
-      image: "/placeholder.svg?height=250&width=400",
+      image: "https://youpreneur.com/wp-content/uploads/2020/01/Building-a-Successful-Freelancing-Business-with-Jason-Resnick-e1579549934489.png",
       author: "Emma Davis",
       date: "March 8, 2024",
       category: "Business",
@@ -49,7 +49,7 @@ const Blog = () => {
       id: 5,
       title: "Color Grading Techniques for Beginners",
       excerpt: "Transform your videos with professional color grading methods.",
-      image: "/placeholder.svg?height=250&width=400",
+      image: "https://i.ytimg.com/vi/huMGyDnq0bk/maxresdefault.jpg",
       author: "Alex Johnson",
       date: "March 5, 2024",
       category: "Video Editing",
@@ -59,7 +59,7 @@ const Blog = () => {
       id: 6,
       title: "Growing Your YouTube Channel in 2024",
       excerpt: "Proven strategies to increase subscribers and engagement.",
-      image: "/placeholder.svg?height=250&width=400",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1mSt_rhZLFcnn-PVcooBYAeB7usLsAcdyLA&s",
       author: "Sarah Chen",
       date: "March 3, 2024",
       category: "Growth",
@@ -90,7 +90,7 @@ const Blog = () => {
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="relative">
                 <img
-                  src={featuredPost.image || "/placeholder.svg"}
+                  src="/https://www.proglobalbusinesssolutions.com/wp-content/uploads/2022/04/social-media-video-editing-tips-scaled.jpg"
                   alt={featuredPost.title}
                   className="w-full h-64 lg:h-full object-cover"
                 />

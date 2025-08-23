@@ -11,14 +11,13 @@ const About = () => {
   const team = [
     {
       name: "MD Raihan  (Kb)",
-      role: "Creative Director",
-      image: "https://scontent.fdac147-1.fna.fbcdn.net/v/t39.30808-6/488991945_2015287382332811_6124703051187284899_n.jpg?stp=c0.168.1540.1540a_dst-jpg_s206x206_tt6&_nc_cat=104&ccb=1-7&_nc_sid=52bb43&_nc_eui2=AeFEMbcB2zIg4vlXG0dFz9q4K_CxBFt8pv4r8LEEW3ym_vTkGbVd0bKyThJYSgllh_9NQuHzk82HIHIl1UtJo6sQ&_nc_ohc=fLMVht_3hTYQ7kNvwFkydfe&_nc_oc=AdkuUdKcTuwuvIvnIhkU-oT1N8-HbA1WgK0zD6x9SGjdtsuuzf8vteGzFNdPn_9EquI&_nc_zt=23&_nc_ht=scontent.fdac147-1.fna&_nc_gid=qnLE5_1aXVgFcAUzOEMeaQ&oh=00_AfVBkrkdHaR_GxfTfa1kxWmHwWx3Xy0_GolqxgC5KgtEmQ&oe=68AECBEC",
-      bio: "10+ years in video editing and creative direction",
+      role: "HO & Creative Director",
+      image: "https://scontent.fdac147-1.fna.fbcdn.net/v/t39.30808-6/481455224_1986988411829375_5755904641479299324_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=106&ccb=1-7&_nc_sid=fe5ecc&_nc_eui2=AeEyUT6b__H0jG353MIXZZdbdNCoOhiE4Tp00Kg6GIThOpRZnjOvOO020fRF8dAKHgx4W8pDlJ8Lq_6xSlVLQWRA&_nc_ohc=zcbWdAiwSKwQ7kNvwGaiW-o&_nc_oc=Adm64RvcAtj3GEfMN2vhx7SoqAfkNPF8yUmrVNU7FXeg0P8d5BCLDz-QohzAca51waA&_nc_zt=23&_nc_ht=scontent.fdac147-1.fna&_nc_gid=2IVz1I84dJ3dnPxj2_3I9w&oh=00_AfXbe_u781AqYiHRJk1EPKNH0CqrhYxS5ESvd4opE9clDQ&oe=68AF66F8",
     },
     {
-      name: "MD Raihan MIah",
-      role: "General Manager",
-      image: "https://scontent.fdac147-1.fna.fbcdn.net/v/t1.6435-9/122269301_928780167650210_6572663537588986019_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=110&ccb=1-7&_nc_sid=fe5ecc&_nc_eui2=AeEV9LOFrBvIf4iQO14fB-hG0jt9YOjM2n7SO31g6Mzafk5cTQtXwqI8lgGQYul1gUih_alYzDFWtmqCXSXXpkmU&_nc_ohc=ZXDIl0uE0zYQ7kNvwGM6bGk&_nc_oc=AdnfisYP8HbKhx3lg_WpmPkK4kl2USXgjUz2TWiA7b7VV4wNgN_3yNUMZ3ZInC2YYU8&_nc_zt=23&_nc_ht=scontent.fdac147-1.fna&_nc_gid=knkzZ5-V4HNYpHKoMEaPEA&oh=00_AfWYOjdHn96U9HxpRjbjVd7yjhhQiNEpQxIB7Ao_qPtB1g&oe=68D057C0",
+      name: "Moniruzzaman",
+      role: "Co-Founder",
+      image: "https://avatars.githubusercontent.com/u/115658279?v=4",
       bio: "Expert in thumbnail design and visual branding",
     },
     {
@@ -63,7 +62,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="https://scontent.fdac147-1.fna.fbcdn.net/v/t39.30808-6/475845758_1961535351041348_7875120399383956409_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFmGy-qJ1cFm8_y4lez68R8SGnCZvSgMkpIacJm9KAySitb1m8qA0Xkv42ms38lKlcu344B7LqN5KI1YfOGzQGG&_nc_ohc=zrsP6vGEwFwQ7kNvwGKXVx7&_nc_oc=AdmR1ZcE4Q9NuTN_mH6TkODIaAdnQEUp2KeGOofZCyzo7rahXXZCH8zWZFv7Tg_8G3I&_nc_zt=23&_nc_ht=scontent.fdac147-1.fna&_nc_gid=U6HN-913o1uGKGtCJACiXQ&oh=00_AfXuerCy7syg9MTFA8e9hvbdETNm6BSXGznE3unqFifycA&oe=68AECE7A"
+                src="https://media.licdn.com/dms/image/v2/D563DAQH9a8N8-M1Ndg/image-scale_127_750/image-scale_127_750/0/1700868161300/bongoit_rangpur_cover?e=1756544400&v=beta&t=a4eDCKdInIdOgHsNGTXjYFFuIHDDEHlzlU1FdQ6fml8"
                 alt="Our team at work"
                 className="rounded-lg shadow-lg"
               />
