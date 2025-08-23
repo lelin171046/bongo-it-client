@@ -10,7 +10,7 @@ const TestimonialsCarousel = () => {
     {
       name: "Sarah Johnson",
       role: "YouTube Creator",
-      avatar: "/placeholder.svg?height=80&width=80",
+      avatar: "https://media.istockphoto.com/id/1184187261/photo/portrait-of-cheerful-bearded-black-man-over-yellow-background.jpg?s=612x612&w=0&k=20&c=me77y_a3sfKKOauLJpMMQo3wctCyMTf9_PtQT6YLhN4=",
       content:
         "The video editing quality exceeded my expectations. My channel growth increased by 300% after working with this team!",
       rating: 5,
@@ -19,7 +19,7 @@ const TestimonialsCarousel = () => {
     {
       name: "Mike Chen",
       role: "Business Owner",
-      avatar: "/placeholder.svg?height=80&width=80",
+      avatar: "https://t3.ftcdn.net/jpg/03/22/53/38/360_F_322533850_Lz5JL2K0nVqL48gjCiRLSa2ssxpdfyer.jpg",
       content:
         "Their thumbnail designs are incredible. Click-through rates improved dramatically, and the turnaround time is amazing.",
       rating: 5,
@@ -28,7 +28,7 @@ const TestimonialsCarousel = () => {
     {
       name: "Emma Rodriguez",
       role: "Content Creator",
-      avatar: "/placeholder.svg?height=80&width=80",
+      avatar: "https://media.istockphoto.com/id/863488868/photo/portrait-of-smiling-young-man-in-city-on-sunny-day.jpg?s=612x612&w=0&k=20&c=7tD8Nm7e6eZixJWkuXE99PmX4yEvMkts8DMAiOLv3y8=",
       content:
         "The YouTube SEO optimization helped my videos rank higher. I'm getting more organic views than ever before!",
       rating: 5,
@@ -37,7 +37,7 @@ const TestimonialsCarousel = () => {
     {
       name: "David Kim",
       role: "Freelancer",
-      avatar: "/placeholder.svg?height=80&width=80",
+      avatar: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       content:
         "Their freelancing support was game-changing. I landed my first high-paying client within a week of their help.",
       rating: 5,
