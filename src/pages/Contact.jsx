@@ -138,75 +138,76 @@ const Contact = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-8 items-center justify-center">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <Mail className="w-6 h-6 text-emerald-600 mt-1 mr-4" />
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Email</h3>
-                      <p className="text-gray-600">promarketerraihan@gmail.com</p>
-                      <p className="text-sm text-gray-500">We'll respond within 2 hours</p>
-                    </div>
-                  </div>
+            <div className="space-y-8 text-center">
+  <div>
+    <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+    <div className="space-y-6">
+      <div className="flex flex-col items-center">
+        <Mail className="w-6 h-6 text-emerald-600 mb-2" />
+        <div>
+          <h3 className="font-semibold text-gray-900">Email</h3>
+          <p className="text-gray-600">promarketerraihan@gmail.com</p>
+          <p className="text-sm text-gray-500">We'll respond within 2 hours</p>
+        </div>
+      </div>
 
-                  <div className="flex items-start">
-                    <Phone className="w-6 h-6 text-emerald-600 mt-1 mr-4" />
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Phone</h3>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
-                      <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
-                    </div>
-                  </div>
+      <div className="flex flex-col items-center">
+        <Phone className="w-6 h-6 text-emerald-600 mb-2" />
+        <div>
+          <h3 className="font-semibold text-gray-900">Phone & Whatsapp </h3>
+          <p className="text-gray-600">+880 1876-213996</p>
+          <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
+        </div>
+      </div>
 
-                  <div className="flex items-start">
-                    <MapPin className="w-6 h-6 text-emerald-600 mt-1 mr-4" />
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Address</h3>
-                      <p className="text-gray-600">
-                        123 Business Street
-                        <br />
-                        New York, NY 10001
-                      </p>
-                    </div>
-                  </div>
+      <div className="flex flex-col items-center">
+        <MapPin className="w-6 h-6 text-emerald-600 mb-2" />
+        <div>
+          <h3 className="font-semibold text-gray-900">Address</h3>
+          <p className="text-gray-600">
+             Akhsha Complex (2th floor), Burirhat, Rangpur City,
+            <br />
+           Bangladesh
+          </p>
+        </div>
+      </div>
 
-                  <div className="flex items-start">
-                    <Clock className="w-6 h-6 text-emerald-600 mt-1 mr-4" />
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Business Hours</h3>
-                      <p className="text-gray-600">
-                        Monday - Friday: 9AM - 6PM EST
-                        <br />
-                        Weekend: By appointment
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div className="flex flex-col items-center">
+        <Clock className="w-6 h-6 text-emerald-600 mb-2" />
+        <div>
+          <h3 className="font-semibold text-gray-900">Business Hours</h3>
+          <p className="text-gray-600">
+            Monday - Friday: 9AM - 6PM EST
+            <br />
+            Weekend: By appointment
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-              {/* FAQ Section */}
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Frequently Asked Questions</h3>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-medium text-gray-900">How quickly can you start my project?</h4>
-                    <p className="text-sm text-gray-600">Most projects can begin within 24-48 hours of confirmation.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900">Do you offer revisions?</h4>
-                    <p className="text-sm text-gray-600">Yes, we include 2-3 rounds of revisions with every project.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900">What's your payment process?</h4>
-                    <p className="text-sm text-gray-600">
-                      50% upfront, 50% upon completion. We accept all major payment methods.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+  {/* FAQ Section */}
+  <div className="bg-gray-50 rounded-xl p-6">
+    <h3 className="text-lg font-semibold text-gray-900 mb-4">Frequently Asked Questions</h3>
+    <div className="space-y-4 text-left">
+      <div>
+        <h4 className="font-medium text-gray-900">How quickly can you start my project?</h4>
+        <p className="text-sm text-gray-600">Most projects can begin within 24-48 hours of confirmation.</p>
+      </div>
+      <div>
+        <h4 className="font-medium text-gray-900">Do you offer revisions?</h4>
+        <p className="text-sm text-gray-600">Yes, we include 2-3 rounds of revisions with every project.</p>
+      </div>
+      <div>
+        <h4 className="font-medium text-gray-900">What's your payment process?</h4>
+        <p className="text-sm text-gray-600">
+          50% upfront, 50% upon completion. We accept all major payment methods.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </section>

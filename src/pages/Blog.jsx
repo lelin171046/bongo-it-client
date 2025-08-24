@@ -72,16 +72,23 @@ const Blog = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 to-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Our <span className="text-emerald-600">Blog</span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Expert insights, tips, and strategies to help you succeed in content creation and digital marketing
-          </p>
-        </div>
-      </section>
+      <section
+  className="relative bg-cover bg-center py-20"
+  style={{ backgroundImage: "url('https://firecut.ai/blog/content/images/2024/04/blog2.webp')"  }}
+>
+  {/* Overlay for readability */}
+  <div className="absolute inset-0 bg-black/40"></div>
+
+  <div className="relative max-w-fit mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+    <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      Our <span className="text-emerald-400">Blog</span>
+    </h1>
+    <p className="text-xl max-w-3xl mx-auto">
+      Expert insights, tips, and strategies to help you succeed in content creation and digital marketing
+    </p>
+  </div>
+</section>
+
 
       {/* Featured Post */}
       <section className="py-12">
