@@ -20,11 +20,11 @@ const HeroSection = () => {
   return (
     <section className="relative w-full  h-screen overflow-hidden">
       {/* YouTube Background */}
-      <YouTubeBackground videoId="sQ22pm-xvrE">
+      <YouTubeBackground videoId="-3tkocW6yyc
+">
         <div
-          className={`flex flex-col justify-center items-center text-center min-h-screen px-4 md:px-8 ${
-            isVisible ? "animate-fade-in" : "opacity-0"
-          }`}
+          className={`flex flex-col justify-center items-center text-center min-h-screen px-4 md:px-8 ${isVisible ? "animate-fade-in" : "opacity-0"
+            }`}
         >
           <div className="space-y-6 max-w-4xl">
             {/* Badge */}
@@ -34,14 +34,15 @@ const HeroSection = () => {
             </div>
 
             {/* Heading */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight drop-shadow-2xl">
-              Transform Your{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent animate-pulse">
-                Content
+            <h1 className="text-3xl sm:text-6xl lg:text-3xl xl:text-4xl font-extrabold leading-tight text-center">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 animate-text">
+                Transform Your Content
               </span>
-              <br />
-              Into Success
+              <span className="block mt-4 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.7)] animate-fade-in-up">
+                Into Unstoppable Success ✨
+              </span>
             </h1>
+
 
             {/* Description */}
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-green-400 leading-relaxed backdrop-blur-sm bg-black/30 p-3 sm:p-6 rounded-xl border border-white/10">
@@ -68,32 +69,31 @@ const HeroSection = () => {
             </Link>
           </div>
 
-         
+
         </div>
       </YouTubeBackground>
       <div className="">
-         {/* Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-12 w-full max-w-5xl">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className={`text-center p-3 sm:p-4 lg:p-6 backdrop-blur-sm bg-white/10 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 ${
-                  isVisible ? "animate-fade-in" : "opacity-0"
+        {/* Stats */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-12 w-full max-w-5xl">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className={`text-center p-3 sm:p-4 lg:p-6 backdrop-blur-sm bg-white/10 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 ${isVisible ? "animate-fade-in" : "opacity-0"
                 }`}
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="flex justify-center mb-2 sm:mb-4">
-                  <div className="p-2 sm:p-3 bg-primary/20 rounded-full">
-                    <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground" />
-                  </div>
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
+              <div className="flex justify-center mb-2 sm:mb-4">
+                <div className="p-2 sm:p-3 bg-primary/20 rounded-full">
+                  <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground" />
                 </div>
-                <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white drop-shadow-lg">
-                  {stat.value}
-                </div>
-                <div className="text-xs sm:text-sm text-white/80 font-medium">{stat.label}</div>
               </div>
-            ))}
-          </div>
+              <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white drop-shadow-lg">
+                {stat.value}
+              </div>
+              <div className="text-xs sm:text-sm text-white/80 font-medium">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

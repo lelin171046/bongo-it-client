@@ -96,7 +96,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-     <section className="relative min-h-screen flex items-center justify-center text-center text-white overflow-hidden">
+     <section className="relative min-h-screen flex items-center justify-center text-center text-white overflow-hidden  rounded-xl">
       {/* YouTube Background */}
       <div className="absolute inset-0 w-full h-full">
         <iframe

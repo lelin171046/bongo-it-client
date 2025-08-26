@@ -11,7 +11,7 @@ const VideoPlayer = ({ videoUrl, title, description, views, likes, className }) 
   };
 
   return (
-    <div className={`bg-card rounded-xl shadow-lg overflow-hidden ${className}`}>
+    <div className={`bg-card rounded-xl shadow-lg  overflow-hidden ${className}`}>
       <div className="aspect-video relative">
         <iframe
           src={getEmbedUrl(videoUrl)}
