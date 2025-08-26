@@ -25,35 +25,43 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" },
     { name: "About", path: "/about" },
   ]
-const [theme, setTheme] = useState('light');
 
+ const [theme, setTheme] = useState("light");
 
+  useEffect(() => {
+    // Load theme from localStorage if exists
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.querySelector("html").setAttribute("data-theme", savedTheme);
+    } else {
+      document.querySelector("html").setAttribute("data-theme", theme);
+    }
+  }, []);
 
-	useEffect(() => {
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.querySelector("html").setAttribute("data-theme", theme);
+  }, [theme]);
 
-		localStorage.setItem('theme', theme);
-		const localTheme = localStorage.getItem('theme');
-		document.querySelector('html').setAttribute('data-theme', theme)
-	}, [theme])
-	const handleTheme = (e) => {
+  const handleTheme = (e) => {
+    if (e.target.checked) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
 
-		if (e.target.checked) {
-			setTheme('dark')
-		}
-		else {
-			setTheme('light')
-		}
-	}
   const isActive = (path) => location.pathname === path
 
   return (
   <nav
-  className={`sticky top-0 w-full transition-all z-50 ${
+  className={`sticky top-0 w-full transition-all z-50 dark:bg-gray-100 dark:text-gray-800 px-2 ${
     isScrolled ? "bg-white/20 backdrop-blur-md shadow-lg" : "bg-transparent"
   }`}
 >
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto  ">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
@@ -78,15 +86,24 @@ const [theme, setTheme] = useState('light');
                 {link.name}
               </Link>
             ))}
-           <label htmlFor="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-800">
-	<span>Left</span>
-	<span className="relative">
-		<input id="Toggle1" type="checkbox" className="hidden peer" />
-		<div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-600 peer-checked:dark:bg-violet-600"></div>
-		<div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-100"></div>
-	</span>
-	<span>Right</span>
-</label>
+           <label
+      htmlFor="Toggle1"
+      className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-200"
+    >
+      <span>Light</span>
+      <span className="relative">
+        <input
+          id="Toggle1"
+          type="checkbox"
+          className="hidden peer"
+          onChange={handleTheme}
+          checked={theme === "dark"}
+        />
+        <div className="w-10 h-6 rounded-full shadow-inner bg-gray-400 peer-checked:bg-violet-600"></div>
+        <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow bg-white transition-all peer-checked:left-auto peer-checked:right-0"></div>
+      </span>
+      <span>Dark</span>
+    </label>
             {/* <Link
               to="/login"
               className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-200"

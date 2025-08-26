@@ -18,7 +18,7 @@ const HeroSection = () => {
   ]
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full  h-screen overflow-hidden">
       {/* YouTube Background */}
       <YouTubeBackground videoId="sQ22pm-xvrE">
         <div

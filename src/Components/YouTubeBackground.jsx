@@ -2,7 +2,7 @@ import React from "react";
 
 const YouTubeBackground = ({ videoId, children }) => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen ">
       {/* YouTube Video Background */}
       <div className="absolute inset-0 w-full h-full">
         <iframe
