@@ -86,30 +86,13 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-           <label
-      htmlFor="Toggle1"
-      className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-200"
-    >
-      <span>Light</span>
-      <span className="relative">
-        <input
-          id="Toggle1"
-          type="checkbox"
-          className="hidden peer"
-          onChange={handleTheme}
-          checked={theme === "dark"}
-        />
-        <div className="w-10 h-6 rounded-full shadow-inner bg-gray-400 peer-checked:bg-violet-600"></div>
-        <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow bg-white transition-all peer-checked:left-auto peer-checked:right-0"></div>
-      </span>
-      <span>Dark</span>
-    </label>
-            {/* <Link
+         
+            <Link
               to="/login"
               className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-200"
             >
               Login
-            </Link> */}
+            </Link>
           </div>
 
           {/* Mobile menu button */}
