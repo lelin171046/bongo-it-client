@@ -73,7 +73,7 @@ const Blog = () => {
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section
-  className="relative bg-cover bg-center py-20"
+  className="relative bg-cover bg-center py-20 blur-xs"
   style={{ backgroundImage: "url('https://firecut.ai/blog/content/images/2024/04/blog2.webp')"  }}
 >
   {/* Overlay for readability */}
