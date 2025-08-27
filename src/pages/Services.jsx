@@ -1,4 +1,4 @@
-import { Video, ImageIcon, Search, Users, Check, ArrowRight } from "lucide-react"
+import { Video, ImageIcon, Search, Users, Check, ArrowRight, DoorClosed, Voicemail, LucideSquareRoundCorner, LucideVoicemail } from "lucide-react"
 import { Link } from "react-router-dom"
 
 const Services = () => {
@@ -11,6 +11,7 @@ const Services = () => {
       price: "Starting from $50",
       turnaround: "2-3 days",
     },
+   
     {
       icon: ImageIcon,
       title: "Thumbnail Design",
@@ -27,6 +28,33 @@ const Services = () => {
       price: "Starting from $30",
       turnaround: "1-2 days",
     },
+    {
+  icon: DoorClosed,
+  title: "Script Writing",
+  description: "Engaging and tailored scripts that connect with your audience and deliver your message effectively.",
+  features: [
+    "Creative Storytelling",
+    "SEO-Friendly Scripts",
+    "Clear Structure & Flow",
+    "Custom Tone & Style"
+  ],
+  price: "Starting from $50",
+  turnaround: "2-3 days",
+},
+{
+  icon: LucideVoicemail, // you can swap with a mic-related icon if you have one
+  title: "AI Voiceover",
+  description: "Natural and high-quality AI-generated voiceovers tailored for your videos, ads, and presentations.",
+  features: [
+    "Multiple Voice Options",
+    "Male & Female Voices",
+    "Multilingual Support",
+    "Fast Turnaround"
+  ],
+  price: "Starting from $30",
+  turnaround: "1-2 days",
+},
+
     {
       icon: Users,
       title: "Freelancing Support",
@@ -54,9 +82,9 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white rounded-xl shadow-2xl p-8 hover:shadow-xl transition-shadow">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
                     <service.icon className="w-6 h-6 text-emerald-600" />
