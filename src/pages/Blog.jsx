@@ -72,13 +72,23 @@ const Blog = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section
-  className="relative bg-cover bg-center py-20 blur-xs"
-  style={{ backgroundImage: "url('https://firecut.ai/blog/content/images/2024/04/blog2.webp')"  }}
+    {/* Hero Section */}
+<section
+  className="relative bg-cover bg-center py-20"
+  style={{ backgroundImage: "url('https://firecut.ai/blog/content/images/2024/04/blog2.webp')" }}
 >
+  {/* Blur Layer */}
+  <div className="absolute inset-0">
+    <div
+      className="w-full h-full bg-cover bg-center blur-sm"
+      style={{ backgroundImage: "url('https://firecut.ai/blog/content/images/2024/04/blog2.webp')" }}
+    />
+  </div>
+
   {/* Overlay for readability */}
   <div className="absolute inset-0 bg-black/40"></div>
 
+  {/* Content */}
   <div className="relative max-w-fit mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
     <h1 className="text-4xl md:text-6xl font-bold mb-6">
       Our <span className="text-emerald-400">Blog</span>
@@ -88,6 +98,7 @@ const Blog = () => {
     </p>
   </div>
 </section>
+
 
 
       {/* Featured Post */}
