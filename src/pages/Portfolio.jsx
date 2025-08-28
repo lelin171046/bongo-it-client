@@ -10,7 +10,7 @@ const Portfolio = () => {
       id: 1,
       title: "Complete YouTube Growth Strategy 2024",
       category: "tutorial",
-      videoUrl: "https://youtu.be/-dr-wvPjGFo?si=I3T5y4jBxoV7nBbT",
+      videoUrl: "https://youtu.be/eSEi-Zbl5Fs?list=PLGPbWPwWfXW83JYbehRudE3200NCHah8P",
       description: "Learn the complete strategy to grow your YouTube channel from 0 to 100K subscribers using proven techniques and insider tips.",
       views: "250K views",
       likes: "12K likes",
