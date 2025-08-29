@@ -108,7 +108,7 @@ const Blog = () => {
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="relative">
                 <img
-                  src="/https://www.proglobalbusinesssolutions.com/wp-content/uploads/2022/04/social-media-video-editing-tips-scaled.jpg"
+                  src={featuredPost.image}
                   alt={featuredPost.title}
                   className="w-full h-64 lg:h-full object-cover"
                 />
