@@ -65,55 +65,42 @@ const ServicesOverview = () => {
 
         {/* Slider Container */}
         <div className="relative overflow-hidden">
-         <div
+          <div
   className="flex transition-transform duration-500 ease-in-out"
   style={{ transform: `translateX(-${currentSlide * 100}%)` }}
 >
   {services.map((service, index) => (
     <div
       key={index}
-      className="flex-shrink-0 w-1/3 sm:w-1/2 lg:w-1/4 p-4" // 👈 Responsive widths
+      className="flex col-2 p-2" // 
     >
       <div className="group bg-white rounded-xl border border-sky-600 p-6 hover:shadow-lg hover:border-yellow-300 transition-all duration-300">
         <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-600 transition-colors">
           <service.icon className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors" />
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-        <p className="text-gray-600 mb-4">{service.description}</p>
+        <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-3">
+          {service.title}
+        </h3>
+        <p className="text-sm sm:text-base text-gray-600 mb-4">
+          {service.description}
+        </p>
 
-        <div className="text-2xl font-bold text-emerald-600 mb-4">{service.price}</div>
+        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-emerald-600 mb-4">
+          {service.price}
+        </div>
 
         <ul className="space-y-2 mb-6">
           {service.features.map((feature, idx) => (
-            <li key={idx} className="text-sm text-gray-600 flex items-center">
+            <li
+              key={idx}
+              className="text-xs sm:text-sm lg:text-base text-gray-600 flex items-center"
+            >
               <div className="w-1.5 h-1.5 bg-emerald-600 rounded-full mr-2"></div>
               {feature}
             </li>
           ))}
-        </ul><h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-3">
-  {service.title}
-</h3>
-<p className="text-sm sm:text-base text-gray-600 mb-4">
-  {service.description}
-</p>
-
-<div className="text-lg sm:text-xl lg:text-2xl font-bold text-emerald-600 mb-4">
-  {service.price}
-</div>
-
-<ul className="space-y-2 mb-6">
-  {service.features.map((feature, idx) => (
-    <li
-      key={idx}
-      className="text-xs sm:text-sm lg:text-base text-gray-600 flex items-center"
-    >
-      <div className="w-1.5 h-1.5 bg-emerald-600 rounded-full mr-2"></div>
-      {feature}
-    </li>
-  ))}
-</ul>
-
+        </ul>
 
         <Link
           to="/contact"
@@ -126,6 +113,7 @@ const ServicesOverview = () => {
     </div>
   ))}
 </div>
+
 
 
           {/* Navigation Buttons */}
