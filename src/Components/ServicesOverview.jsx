@@ -52,13 +52,15 @@ const ServicesOverview = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        
+        {/* Section Title */}
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             What We <span className="text-emerald-600">Offer</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
             Professional services designed to help content creators and businesses thrive
           </p>
         </div>
@@ -66,55 +68,61 @@ const ServicesOverview = () => {
         {/* Slider Container */}
         <div className="relative overflow-hidden">
           <div
-  className="flex transition-transform duration-500 ease-in-out"
-  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
->
-  {services.map((service, index) => (
-    <div
-      key={index}
-      className="flex col-2 p-2" // 
-    >
-      <div className="group bg-white rounded-xl border border-sky-600 p-6 hover:shadow-lg hover:border-yellow-300 transition-all duration-300">
-        <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-600 transition-colors">
-          <service.icon className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors" />
-        </div>
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3"
+              >
+                <div className="group bg-white rounded-xl border border-sky-600 p-6 hover:shadow-lg hover:border-yellow-300 transition-all duration-300">
+                  
+                  {/* Icon */}
+                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-600 transition-colors">
+                    <service.icon className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors" />
+                  </div>
 
-        <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-3">
-          {service.title}
-        </h3>
-        <p className="text-sm sm:text-base text-gray-600 mb-4">
-          {service.description}
-        </p>
+                  {/* Title */}
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
 
-        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-emerald-600 mb-4">
-          {service.price}
-        </div>
+                  {/* Description */}
+                  <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 mb-4">
+                    {service.description}
+                  </p>
 
-        <ul className="space-y-2 mb-6">
-          {service.features.map((feature, idx) => (
-            <li
-              key={idx}
-              className="text-xs sm:text-sm lg:text-base text-gray-600 flex items-center"
-            >
-              <div className="w-1.5 h-1.5 bg-emerald-600 rounded-full mr-2"></div>
-              {feature}
-            </li>
-          ))}
-        </ul>
+                  {/* Price */}
+                  <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-emerald-600 mb-4">
+                    {service.price}
+                  </div>
 
-        <Link
-          to="/contact"
-          className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
-        >
-          Get Started
-          <ArrowRight className="w-4 h-4 ml-1" />
-        </Link>
-      </div>
-    </div>
-  ))}
-</div>
+                  {/* Features */}
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li
+                        key={idx}
+                        className="text-xs sm:text-sm md:text-base text-gray-600 flex items-center"
+                      >
+                        <div className="w-1.5 h-1.5 bg-emerald-600 rounded-full mr-2"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
 
-
+                  {/* CTA Link */}
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium transition-colors text-sm sm:text-base"
+                  >
+                    Get Started
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
 
           {/* Navigation Buttons */}
           <button
@@ -131,10 +139,11 @@ const ServicesOverview = () => {
           </button>
         </div>
 
+        {/* View All Services Button */}
         <div className="text-center mt-12">
           <Link
             to="/services"
-            className="bg-emerald-600 text-white px-8 py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold"
+            className="bg-emerald-600 text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold text-sm sm:text-base md:text-lg"
           >
             View All Services
           </Link>

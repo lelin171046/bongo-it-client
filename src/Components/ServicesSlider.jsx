@@ -6,38 +6,38 @@ import img1 from "./../assets/Video Editing .png"
 import img2 from "./../assets/SEO.png"
 import img3 from "./../assets/YouTube Thumbnail.png"
 
-
 const ServicesSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-const services = [
-  {
-    icon: Video,
-    title: "Video Editing",
-    description: "Professional video editing with seamless transitions, color correction, and audio enhancement",
-    image: img1, // ✅ just use the imported local image
-  },
-  {
-    icon: ImageIcon,
-    title: "Thumbnail Design",
-    description: "Eye-catching thumbnails that boost click-through rates and video performance",
-    image: img3
-  },
-  {
-    icon: Search,
-    title: "YouTube SEO",
-    description: "Optimize your content for maximum visibility and organic growth",
-    image: img2
-  },
-  {
-    icon: Users,
-    title: "Freelancing Support",
-    description: "Complete support for your Fiverr and Upwork freelancing journey",
-    image: "https://img.freepik.com/premium-photo/business-man-freelance-worker-call-center-support-service-operator-helpline-having-talk-with-client_191803-11102.jpg", // ✅ direct link
-  },
-]
+  const services = [
+    {
+      icon: Video,
+      title: "Video Editing",
+      description: "Professional video editing with seamless transitions, color correction, and audio enhancement",
+      image: img1,
+    },
+    {
+      icon: ImageIcon,
+      title: "Thumbnail Design",
+      description: "Eye-catching thumbnails that boost click-through rates and video performance",
+      image: img3,
+    },
+    {
+      icon: Search,
+      title: "YouTube SEO",
+      description: "Optimize your content for maximum visibility and organic growth",
+      image: img2,
+    },
+    {
+      icon: Users,
+      title: "Freelancing Support",
+      description: "Complete support for your Fiverr and Upwork freelancing journey",
+      image:
+        "https://img.freepik.com/premium-photo/business-man-freelance-worker-call-center-support-service-operator-helpline-having-talk-with-client_191803-11102.jpg",
+    },
+  ]
 
-
+  // ✅ Auto loop continuously
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % services.length)
@@ -56,15 +56,20 @@ const services = [
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our <span className="text-emerald-600">Services</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
+            Our{" "}
+            <span className="text-emerald-600 underline decoration-wavy decoration-2">
+              Services
+            </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Comprehensive creative services to help you succeed in the digital world
           </p>
         </div>
 
+        {/* Slider */}
         <div className="relative">
           <div className="overflow-hidden rounded-2xl bg-white shadow-xl">
             <div
@@ -73,19 +78,26 @@ const services = [
             >
               {services.map((service, index) => (
                 <div key={index} className="w-full flex-shrink-0">
-                  <div className="grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
+                  <div className="grid lg:grid-cols-2 gap-8 p-6 sm:p-8 lg:p-12">
+                    {/* Text Section */}
                     <div className="flex flex-col justify-center">
-                      <div className="flex items-center mb-6">
-                        <div className="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mr-4">
-                          <service.icon className="w-8 h-8 text-emerald-600" />
+                      <div className="flex items-center mb-4 sm:mb-6">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-emerald-100 rounded-xl flex items-center justify-center mr-4">
+                          <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600" />
                         </div>
-                        <h3 className="text-3xl font-bold text-gray-900">{service.title}</h3>
+                        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+                          {service.title}
+                        </h3>
                       </div>
-                      <p className="text-lg text-gray-600 mb-8">{service.description}</p>
-                      <button className="bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors w-fit">
+                      <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8">
+                        {service.description}
+                      </p>
+                      <button className="bg-emerald-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-emerald-700 transition-colors w-fit text-sm sm:text-base">
                         Learn More
                       </button>
                     </div>
+
+                    {/* Image Section */}
                     <div className="flex items-center justify-center">
                       <img
                         src={service.image || "/placeholder.svg"}
@@ -102,24 +114,24 @@ const services = [
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
+          <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
             {services.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
+                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-colors ${
                   index === currentSlide ? "bg-emerald-600" : "bg-gray-300"
                 }`}
               />
