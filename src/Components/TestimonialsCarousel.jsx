@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react"
 
 const TestimonialsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [itemsPerView, setItemsPerView] = useState(1)
+  const sliderRef = useRef(null)
 
   const testimonials = [
     {
@@ -50,26 +50,25 @@ const TestimonialsCarousel = () => {
     },
   ]
 
-  // Handle responsive items per view
-  useEffect(() => {
-    const updateItemsPerView = () => {
-      if (window.innerWidth < 768) setItemsPerView(1)
-      else if (window.innerWidth < 1024) setItemsPerView(2)
-      else setItemsPerView(3)
-    }
-
-    updateItemsPerView()
-    window.addEventListener("resize", updateItemsPerView)
-    return () => window.removeEventListener("resize", updateItemsPerView)
-  }, [])
-
-  // Auto-slide
+  // Auto-slide on mobile
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-    }, 6000)
+      if (window.innerWidth < 768) {
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+      }
+    }, 5000)
     return () => clearInterval(timer)
   }, [testimonials.length])
+
+  // Scroll slider on mobile when currentIndex changes
+  useEffect(() => {
+    if (window.innerWidth < 768 && sliderRef.current) {
+      sliderRef.current.scrollTo({
+        left: currentIndex * sliderRef.current.offsetWidth,
+        behavior: "smooth",
+      })
+    }
+  }, [currentIndex])
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length)
@@ -93,19 +92,16 @@ const TestimonialsCarousel = () => {
         </div>
 
         {/* Carousel */}
-        <div className="relative overflow-hidden">
+        <div className="relative">
+          {/* Slider for mobile */}
           <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{
-              transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
-              width: `${(testimonials.length / itemsPerView) * 100}%`,
-            }}
+            ref={sliderRef}
+            className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible scroll-smooth snap-x snap-mandatory"
           >
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className={`flex-shrink-0 px-2 sm:px-3 lg:px-4`}
-                style={{ width: `${100 / itemsPerView}%` }}
+                className="flex-shrink-0 w-full md:w-auto snap-center"
               >
                 <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12 flex flex-col h-full justify-between">
                   <Quote className="w-10 h-10 sm:w-12 sm:h-12 text-emerald-100 mb-4" />
@@ -139,32 +135,19 @@ const TestimonialsCarousel = () => {
             ))}
           </div>
 
-          {/* Arrows */}
+          {/* Arrows for mobile */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all hover:scale-105 z-10"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all hover:scale-105 z-10 md:hidden"
           >
             <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all hover:scale-105 z-10"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all hover:scale-105 z-10 md:hidden"
           >
             <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
-
-          {/* Dots */}
-          <div className="flex justify-center mt-6 sm:mt-8 lg:mt-10 space-x-2">
-            {testimonials.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentIndex(idx)}
-                className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-colors ${
-                  idx === currentIndex ? "bg-emerald-600" : "bg-gray-300"
-                }`}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>
