@@ -73,18 +73,25 @@ const Services = () => {
   ]
 
   return (
-    <div className="min-h-screen pt-12 sm:pt-16">
+    <div className="min-h-screen pt-0 sm:pt-3">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 to-white py-12 sm:py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
-            Our <span className="text-emerald-600">Services</span>
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
-            Comprehensive creative services designed to elevate your content and grow your audience
-          </p>
-        </div>
-      </section>
+      <section
+  className="relative bg-cover bg-center bg-no-repeat py-12 sm:py-16 lg:py-24"
+  style={{ backgroundImage: "url('https://wallpapercave.com/wp/wp7110658.jpg')" }}
+>
+  {/* Optional overlay for better text readability */}
+  <div className="absolute inset-0 bg-black/40"></div>
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+      Our <span className="text-emerald-400">Services</span>
+    </h1>
+    <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto px-2">
+      Comprehensive creative services designed to elevate your content and grow your audience
+    </p>
+  </div>
+</section>
+
 
       {/* Services Grid */}
       <section className="py-12 sm:py-16 lg:py-24">
