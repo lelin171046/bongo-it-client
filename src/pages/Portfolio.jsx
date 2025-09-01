@@ -96,59 +96,37 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-     <section className="relative min-h-screen flex items-center justify-center text-center text-white overflow-hidden  rounded-xl">
-      {/* YouTube Background */}
-      <div className="absolute inset-0 w-full h-full">
-        <iframe
-          src="https://www.youtube.com/embed/-dr-wvPjGFo?autoplay=1&mute=1&loop=1&playlist=-dr-wvPjGFo&controls=0&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&disablekb=1"
-          title="YouTube Background Video"
-          className="w-full h-full object-cover"
-          style={{
-            minWidth: "90vw",
-            minHeight: "100vh",
-            transform: "scale(1.4)", // zoom a little so black bars don’t show
-          }}
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-        />
-      </div>
+ 
+<section className="relative w-full h-screen flex items-center justify-center text-center text-white overflow-hidden rounded-xl">
+  {/* YouTube Background */}
+  <div className="absolute inset-0 w-full h-full">
+    <iframe
+      src="https://www.youtube.com/embed/-dr-wvPjGFo?autoplay=1&mute=1&loop=1&playlist=-dr-wvPjGFo&controls=0&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&disablekb=1"
+      title="YouTube Background Video"
+      className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2"
+      frameBorder="0"
+      allow="autoplay; encrypted-media"
+    />
+  </div>
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/60" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center mb-6">
-          <Youtube className="w-12 h-12 text-red-500 mr-4" />
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-            Our Portfolio
-          </h1>
-        </div>
-        <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
-          Explore my collection of YouTube content that has helped thousands of
-          creators grow their channels and achieve success
-        </p>
+  {/* Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-center mb-6">
+      <Youtube className="w-10 sm:w-12 h-10 sm:h-12 text-red-500 mr-3 sm:mr-4" />
+      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+        Our Portfolio
+      </h1>
+    </div>
+    <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8 px-2">
+      Explore my collection of YouTube content that has helped thousands of creators grow their channels and achieve success
+    </p>
+  </div>
+</section>
 
-        {/* Stats */}
-        <div className="flex flex-wrap justify-center gap-4 text-sm">
-          <div className="flex items-center bg-white/10 backdrop-blur-md rounded-full px-4 py-2 shadow-sm">
-            <TrendingUp className="w-4 h-4 text-red-400 mr-2" />
-            <span className="font-semibold">1M+</span>
-            <span className="text-gray-300 ml-1">Total Views</span>
-          </div>
-          <div className="flex items-center bg-white/10 backdrop-blur-md rounded-full px-4 py-2 shadow-sm">
-            <Users className="w-4 h-4 text-red-400 mr-2" />
-            <span className="font-semibold">50K+</span>
-            <span className="text-gray-300 ml-1">Subscribers Helped</span>
-          </div>
-          <div className="flex items-center bg-white/10 backdrop-blur-md rounded-full px-4 py-2 shadow-sm">
-            <Clock className="w-4 h-4 text-red-400 mr-2" />
-            <span className="font-semibold">100+</span>
-            <span className="text-gray-300 ml-1">Hours of Content</span>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
       {/* Filter Buttons */}
       <section className="py-8 bg-card/50 border-b">
