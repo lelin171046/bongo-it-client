@@ -20,7 +20,7 @@ const HeroSection = () => {
   return (
     <section className="relative w-full  h-screen overflow-hidden">
       {/* YouTube Background */}
-      <YouTubeBackground videoId="-3tkocW6yyc
+      <YouTubeBackground videoId="6kYRUsXtS4s
 ">
         <div
           className={`flex flex-col justify-center items-center text-center min-h-screen px-4 md:px-8 ${isVisible ? "animate-fade-in" : "opacity-0"

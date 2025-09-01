@@ -1,12 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useRef } from "react"
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { useState, useEffect, useRef } from "react";
+import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const TestimonialsCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const sliderRef = useRef(null)
-
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -48,35 +45,30 @@ const TestimonialsCarousel = () => {
       rating: 5,
       channel: "@DavidFreelance",
     },
-  ]
+  ];
 
-  // Auto-slide on mobile
+  const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(0);
+  const [itemsPerView, setItemsPerView] = useState(1);
+
+  // Set items per view based on screen width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) setItemsPerView(1);
+      else setItemsPerView(3);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Auto-slide every 1.3s
   useEffect(() => {
     const timer = setInterval(() => {
-      if (window.innerWidth < 768) {
-        setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-      }
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [testimonials.length])
-
-  // Scroll slider on mobile when currentIndex changes
-  useEffect(() => {
-    if (window.innerWidth < 768 && sliderRef.current) {
-      sliderRef.current.scrollTo({
-        left: currentIndex * sliderRef.current.offsetWidth,
-        behavior: "smooth",
-      })
-    }
-  }, [currentIndex])
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 1800);
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
 
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-emerald-50 to-white">
@@ -91,17 +83,17 @@ const TestimonialsCarousel = () => {
           </p>
         </div>
 
-        {/* Carousel */}
-        <div className="relative">
-          {/* Slider for mobile */}
+        {/* Slider */}
+        <div className="relative overflow-hidden">
           <div
-            ref={sliderRef}
-            className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible scroll-smooth snap-x snap-mandatory"
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 w-full md:w-auto snap-center"
+               className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-3"
+                style={{ width: `${100 / itemsPerView}%` }}
               >
                 <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12 flex flex-col h-full justify-between">
                   <Quote className="w-10 h-10 sm:w-12 sm:h-12 text-emerald-100 mb-4" />
@@ -135,23 +127,29 @@ const TestimonialsCarousel = () => {
             ))}
           </div>
 
-          {/* Arrows for mobile */}
+          {/* Arrows */}
           <button
-            onClick={prevSlide}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all hover:scale-105 z-10 md:hidden"
+            onClick={() =>
+              setCurrentIndex(
+                (prev) => (prev - 1 + testimonials.length) % testimonials.length
+              )
+            }
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg"
           >
-            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+            <ChevronLeft className="w-6 h-6 text-gray-800" />
           </button>
           <button
-            onClick={nextSlide}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all hover:scale-105 z-10 md:hidden"
+            onClick={() =>
+              setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+            }
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 sm:p-3 rounded-full shadow-lg"
           >
-            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+            <ChevronRight className="w-6 h-6 text-gray-800" />
           </button>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default TestimonialsCarousel
+export default TestimonialsCarousel;

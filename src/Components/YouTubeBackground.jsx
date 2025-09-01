@@ -8,11 +8,11 @@ const YouTubeBackground = ({ videoId, children }) => {
         <iframe
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1&fs=0&cc_load_policy=0&start=0&end=0`}
           title="YouTube Background Video"
-          className="w-full h-full object-cover blur-xs "
+          className="w-full h-full object-cover  "
           style={{
             minWidth: "100vw",
             minHeight: "100vh",
-            transform: "scale(1.2)",
+            transform: "scale(1.48)",
           }}
           allow="autoplay; encrypted-media"
         />
