@@ -72,7 +72,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-    {/* Hero Section */}
+   
 <section
   className="relative bg-cover bg-center py-20"
   style={{ backgroundImage: "url('https://firecut.ai/blog/content/images/2024/04/blog2.webp')" }}
