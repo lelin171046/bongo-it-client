@@ -1,12 +1,12 @@
-import { 
-  Video, 
-  ImageIcon, 
-  Search, 
-  Users, 
-  Check, 
-  ArrowRight, 
-  DoorClosed, 
-  LucideVoicemail 
+import {
+  Video,
+  ImageIcon,
+  Search,
+  Users,
+  Check,
+  ArrowRight,
+  DoorClosed,
+  LucideVoicemail
 } from "lucide-react"
 import { Link } from "react-router-dom"
 
@@ -76,21 +76,21 @@ const Services = () => {
     <div className="min-h-screen pt-0 sm:pt-3">
       {/* Hero Section */}
       <section
-  className="relative bg-cover bg-center bg-no-repeat py-12 sm:py-16 lg:py-24"
-  style={{ backgroundImage: "url('https://wallpapercave.com/wp/wp7110658.jpg')" }}
->
-  {/* Optional overlay for better text readability */}
-  <div className="absolute inset-0 bg-black/40"></div>
+        className="relative bg-cover bg-center bg-no-repeat py-12 sm:py-16 lg:py-24"
+        style={{ backgroundImage: "url('https://wallpapercave.com/wp/wp7110658.jpg')" }}
+      >
+        {/* Optional overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
 
-  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-      Our <span className="text-emerald-400">Services</span>
-    </h1>
-    <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto px-2">
-      Comprehensive creative services designed to elevate your content and grow your audience
-    </p>
-  </div>
-</section>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+            Our <span className="text-emerald-400">Services</span>
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto px-2">
+            Comprehensive creative services designed to elevate your content and grow your audience
+          </p>
+        </div>
+      </section>
 
 
       {/* Services Grid */}
@@ -98,8 +98,8 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 sm:p-8 flex flex-col"
               >
                 {/* Icon & Title */}

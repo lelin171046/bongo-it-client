@@ -118,21 +118,21 @@ const Portfolio = () => {
         {/* Overlay */}
 
 
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/40 py-12 sm:py-16 lg:py-24" />
 
         {/* Content */}
-      
-  <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8">
-  <div className="flex items-center justify-center mb-6">
-    <Youtube className="w-10 sm:w-12 h-10 sm:h-12 text-red-500 mr-3 sm:mr-4" />
-    <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-      Our Portfolio
-    </h1>
-  </div>
-  <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mb-8">
-    Explore my collection of YouTube content that has helped thousands of creators grow their channels and achieve success
-  </p>
-</div>
+
+        <div className="relative z-10 flex flex-col items-center justify-center h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex items-center justify-center mb-6">
+            <Youtube className="w-10 sm:w-12 h-10 sm:h-12 text-red-500 mr-3 sm:mr-4" />
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+              Our Portfolio
+            </h1>
+          </div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mb-8">
+            Explore my collection of YouTube content that has helped thousands of creators grow their channels and achieve success
+          </p>
+        </div>
 
       </div>
 
@@ -147,8 +147,8 @@ const Portfolio = () => {
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeFilter === filter.id
-                    ? "bg-primary text-primary-foreground shadow-lg scale-105"
-                    : "bg-background hover:bg-primary/10 text-foreground hover:text-primary border border-border"
+                  ? "bg-primary text-primary-foreground shadow-lg scale-105"
+                  : "bg-background hover:bg-primary/10 text-foreground hover:text-primary border border-border"
                   }`}
               >
                 <Filter className="w-4 h-4 inline mr-2" />

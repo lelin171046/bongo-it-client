@@ -70,7 +70,7 @@ const Blog = () => {
   const categories = ["All", "Video Editing", "Design", "SEO", "Business", "Growth"]
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-4">
       {/* Hero Section */}
    
 <section

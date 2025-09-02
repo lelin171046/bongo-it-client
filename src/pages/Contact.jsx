@@ -29,7 +29,7 @@ const Contact = () => {
   const services = ["Video Editing", "Thumbnail Design", "YouTube SEO", "Freelancing Support", "Custom Package"]
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-4">
       {/* Hero Section */}
       <section className="relative bg-cover bg-center bg-no-repeat py-12  sm:py-16 lg:py-24"
   style={{ backgroundImage: "url('https://z-p3-scontent.fjsr1-2.fna.fbcdn.net/v/t39.30808-6/467280086_412500785259082_856439851067107433_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeElLCXIRA1TXKeK5SxMHH_-mgX877_dhnaaBfzvv92GdsXBmhOp7P5Y3CTE7rBKGJfv-rfzac9tVgQRGa-2K75n&_nc_ohc=A7162rQZG8MQ7kNvwFXa3PO&_nc_oc=AdnuRiwUbILnsaM-gF2FStKJEeo8OUZOPlk13hNo1oFITdhMLMyld1OsFMwJt09s4HM&_nc_zt=23&_nc_ht=z-p3-scontent.fjsr1-2.fna&_nc_gid=BGSWAnRJt_GArHcaGeQ0Nw&oh=00_AfVIbm0Rb8WaW9hto_Uc1XVWzb8_kxcGMrRVmleq5WYiZA&oe=68BC8F56')" }}>
