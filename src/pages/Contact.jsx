@@ -31,24 +31,38 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-4">
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center bg-no-repeat py-12  sm:py-16 lg:py-24"
-  style={{ backgroundImage: "url('https://z-p3-scontent.fjsr1-2.fna.fbcdn.net/v/t39.30808-6/467280086_412500785259082_856439851067107433_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeElLCXIRA1TXKeK5SxMHH_-mgX877_dhnaaBfzvv92GdsXBmhOp7P5Y3CTE7rBKGJfv-rfzac9tVgQRGa-2K75n&_nc_ohc=A7162rQZG8MQ7kNvwFXa3PO&_nc_oc=AdnuRiwUbILnsaM-gF2FStKJEeo8OUZOPlk13hNo1oFITdhMLMyld1OsFMwJt09s4HM&_nc_zt=23&_nc_ht=z-p3-scontent.fjsr1-2.fna&_nc_gid=BGSWAnRJt_GArHcaGeQ0Nw&oh=00_AfVIbm0Rb8WaW9hto_Uc1XVWzb8_kxcGMrRVmleq5WYiZA&oe=68BC8F56')" }}>
-      {/* Blur Layer */}
+     <section
+  className="relative bg-cover bg-center bg-no-repeat py-12 sm:py-16 lg:py-24"
+  style={{
+    backgroundImage:
+      "url('https://z-p3-scontent.fjsr1-2.fna.fbcdn.net/v/t39.30808-6/467280086_412500785259082_856439851067107433_n.jpg?...')",
+  }}
+>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/70 via-emerald-500/60 to-emerald-400/70" />
+
+  {/* Optional Blur Layer (if you want to keep the blur effect too) */}
   <div className="absolute inset-0">
     <div
-      className="w-full h-full bg-cover bg-center blur-sm"
-      style={{ backgroundImage: "url('https://z-p3-scontent.fjsr1-2.fna.fbcdn.net/v/t39.30808-6/467280086_412500785259082_856439851067107433_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeElLCXIRA1TXKeK5SxMHH_-mgX877_dhnaaBfzvv92GdsXBmhOp7P5Y3CTE7rBKGJfv-rfzac9tVgQRGa-2K75n&_nc_ohc=A7162rQZG8MQ7kNvwFXa3PO&_nc_oc=AdnuRiwUbILnsaM-gF2FStKJEeo8OUZOPlk13hNo1oFITdhMLMyld1OsFMwJt09s4HM&_nc_zt=23&_nc_ht=z-p3-scontent.fjsr1-2.fna&_nc_gid=BGSWAnRJt_GArHcaGeQ0Nw&oh=00_AfVIbm0Rb8WaW9hto_Uc1XVWzb8_kxcGMrRVmleq5WYiZA&oe=68BC8F56')" }}
+      className="w-full h-full bg-cover bg-center blur-sm opacity-40"
+      style={{
+        backgroundImage:
+          "url('https://z-p3-scontent.fjsr1-2.fna.fbcdn.net/v/t39.30808-6/467280086_412500785259082_856439851067107433_n.jpg?...')",
+      }}
     />
   </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Get In <span className="text-emerald-600">Touch</span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your content? Let's discuss your project and create something amazing together
-          </p>
-        </div>
-      </section>
+
+  {/* Content */}
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      Get In <span className="text-yellow-300">Touch</span>
+    </h1>
+    <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+      Ready to transform your content? Let's discuss your project and create something amazing together
+    </p>
+  </div>
+</section>
+
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

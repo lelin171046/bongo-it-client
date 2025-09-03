@@ -100,39 +100,35 @@ const Portfolio = () => {
 
       <div className="relative min-h-screen overflow-hidden rounded-xl">
         {/* YouTube Video Background */}
-        <div className="absolute inset-0 w-full h-full">
-          <iframe
-            src={`https://www.youtube.com/embed/6kYRUsXtS4s?autoplay=1&mute=1&loop=1&playlist=6kYRUsXtS4s&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1&fs=0&cc_load_policy=0`}
-            title="YouTube Background Video"
-            className="absolute top-0 left-0 w-full h-full object-cover 
-             scale-[3] sm:scale-[2] md:scale-[1.7] lg:scale-[1.35]"
-            style={{
-              transformOrigin: "center", // keep video centered
-              transition: "transform 0.6s ease-in-out",
-            }}
-            allow="autoplay; encrypted-media"
-          />
+        <div className="relative min-h-screen overflow-hidden">
+  {/* YouTube Background */}
+  <div className="absolute inset-0 flex items-center justify-center">
+    <iframe
+      src="https://www.youtube.com/embed/6kYRUsXtS4s?autoplay=1&mute=1&loop=1&playlist=6kYRUsXtS4s&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1&fs=0&cc_load_policy=0"
+      title="Portfolio Background"
+      className="w-full h-full min-w-full min-h-full object-cover scale-[3] sm:scale-[2] md:scale-[1.7] lg:scale-[1.35]"
+      style={{ transformOrigin: "center" }}
+      allow="autoplay; encrypted-media"
+    />
+  </div>
 
-        </div>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/40" />
 
-        {/* Overlay */}
+  {/* Centered Content */}
+  <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 text-center">
+    <div className="flex items-center justify-center mb-6">
+      <Youtube className="w-10 sm:w-12 h-10 sm:h-12 text-red-500 mr-3 sm:mr-4" />
+      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+        Our Portfolio
+      </h1>
+    </div>
+    <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mb-8">
+      Explore my collection of YouTube content that has helped thousands of creators grow their channels and achieve success
+    </p>
+  </div>
+</div>
 
-
-        <div className="absolute inset-0 bg-black/40 py-12 sm:py-16 lg:py-24" />
-
-        {/* Content */}
-
-        <div className="relative z-10 flex flex-col items-center justify-center h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center mb-6">
-            <Youtube className="w-10 sm:w-12 h-10 sm:h-12 text-red-500 mr-3 sm:mr-4" />
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-              Our Portfolio
-            </h1>
-          </div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mb-8">
-            Explore my collection of YouTube content that has helped thousands of creators grow their channels and achieve success
-          </p>
-        </div>
 
       </div>
 
