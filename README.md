@@ -1,14 +1,107 @@
-# React + Vite
+# 🚀 React + Vite Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is built using **React** and **Vite**, providing a fast development environment with **Hot Module Replacement (HMR)** and optimized production builds.
 
-Temporary Live Link: https://lovely-cassata-30993c.netlify.app/
+---
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Temporary Live Link:**
+👉 [https://lovely-cassata-30993c.netlify.app/](https://lovely-cassata-30993c.netlify.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚡ Tech Stack
+
+* **React**
+* **Vite**
+* **JavaScript / JSX**
+* **ESLint**
+* **Tailwind CSS** (if included)
+* **React Router** (if included)
+
+---
+
+## 🔥 Features
+
+* Ultra-fast development with Vite
+* Hot Module Replacement (HMR)
+* Minimal and clean project structure
+* Ready for extension with your own components
+* Supports modern JavaScript & JSX
+
+---
+
+## 🛠️ Setup & Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/your-repo-name.git
+
+# Navigate to project folder
+cd your-repo-name
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+---
+
+## ⚙️ Plugins Used
+
+Currently, two official React plugins are available for Vite:
+
+### 1️⃣ **@vitejs/plugin-react**
+
+* Uses **Babel**
+* Supports **Fast Refresh**
+
+### 2️⃣ **@vitejs/plugin-react-swc**
+
+* Uses **SWC**
+* Faster builds
+* Also supports **Fast Refresh**
+
+---
+
+## 📁 File Structure
+
+```
+project/
+ ├── src/
+ │   ├── components/
+ │   ├── pages/
+ │   ├── App.jsx
+ │   └── main.jsx
+ ├── index.html
+ ├── package.json
+ └── vite.config.js
+```
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 🧪 Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+## 📜 License
+
+This project is open-source and available under the **MIT License**.
+
+---
+
